@@ -11,7 +11,6 @@ ENV DEFAULT_USER=rstudio
 ENV PANDOC_VERSION=default
 
 RUN /rocker_scripts/install_rstudio.sh
-RUN /rocker_scripts/install_pandoc.sh
 RUN R -e "install.packages('remotes',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "remotes::install_version('ggplot2',version='3.3.1')"
 
